@@ -6,6 +6,6 @@
 
 **A mecânica interna de comparação do Git:** Ter que provocar o conflito de propósito deixou muito mais evidente como o Git analisa o histórico. Ficou claro na prática como ele usa o ancestral comum para comparar as diferenças nas pontas de cada branch. Entender exatamente quais condições fazem o Git desistir de juntar sozinho reforçou meu entendimento sobre o funcionamento interno da ferramenta, indo além do simples uso dos comandos.
 
-## O que quero explorar (ou o que ainda traz dúvidas)
+## O que quero explorar (ou o que ainda é confuso)
 
 **Simulação de cenários complexos e *Tree Conflicts*:** Como resolver conflitos comuns de texto já é tranquilo, minha curiosidade agora se volta para situações mais caóticas. Por exemplo: como reproduzir e lidar de forma consistente com tree conflicts (quando uma branch edita um arquivo enquanto a outra o renomeia ou deleta) ou como simular e resolver conflitos em cascata durante um rebase longo com múltiplos commits alterando a mesma estrutura.
