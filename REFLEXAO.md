@@ -1,30 +1,11 @@
-# Repositório de Práticas e Exercícios
+## O que foi difícil
 
-Este repositório foi criado como parte necessária na solução da atividade prática de Git e versionamento, desenvolvida na disciplina CIN0136 — Desenvolvimento de Software (CIn-UFPE, 2026.1).
+**Simular o conflito intencionalmente:** Como já tenho experiência com o Git e o hábito de manter o fluxo de trabalho organizado para evitar problemas de merge, a maior dificuldade foi fazer a engenharia reversa da situação. Forçar o Git a gerar um conflito exigiu sair do modo automático e planejar a arquitetura do erro: criar as branches a partir do mesmo commit base e garantir que ambas alterassem exatamente a mesma linha do mesmo arquivo, forçando o Git a falhar no auto-merge.
 
-## 📁 Estrutura do Projeto
+## O que ficou claro
 
-Abaixo está a descrição dos principais diretórios e arquivos deste repositório:
+**A mecânica interna de comparação do Git:** Ter que provocar o conflito de propósito deixou muito mais evidente como o Git analisa o histórico. Ficou claro na prática como ele usa o ancestral comum para comparar as diferenças nas pontas de cada branch. Entender exatamente quais condições fazem o Git desistir de juntar sozinho reforçou meu entendimento sobre o funcionamento interno da ferramenta, indo além do simples uso dos comandos.
 
-* **`exercicios/`**: Contém as práticas guiadas de versionamento:
-  * `ex01-commits/`: Exercícios para praticar o fluxo básico de commits.
-  * `ex02-branches/`: Exercícios envolvendo a criação e gerenciamento de branches.
-  * `ex03-conflito/`: Simulações para treinar a resolução de conflitos no Git.
-* **`projeto/`**: Diretório contendo códigos iniciais de teste e experimentação:
-  * `hello-world.js`: Script de teste em JavaScript.
-  * `hello-world.ts`: Script de teste em TypeScript.
-* **`REFLEXAO.md`**: Documento reservado para anotações, aprendizados e considerações sobre as práticas realizadas.
+## O que quero explorar (ou o que ainda traz dúvidas)
 
-## 🛠️ Tecnologias Utilizadas
-
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/)
-* [TypeScript](https://www.typescriptlang.org/)
-
-## 🚀 Como Executar
-
-Para rodar este projeto na sua máquina, siga os passos abaixo:
-
-1. **Clone o repositório:**
-   ```bash
-   git clone <URL_DO_SEU_REPOSITORIO>
+**Simulação de cenários complexos e *Tree Conflicts*:** Como resolver conflitos comuns de texto já é tranquilo, minha curiosidade agora se volta para situações mais caóticas. Por exemplo: como reproduzir e lidar de forma consistente com tree conflicts (quando uma branch edita um arquivo enquanto a outra o renomeia ou deleta) ou como simular e resolver conflitos em cascata durante um rebase longo com múltiplos commits alterando a mesma estrutura.
